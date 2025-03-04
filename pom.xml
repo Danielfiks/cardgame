@@ -4,9 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <!-- TODO: Sett din egen groupID og artifactID -->
-    <groupId>velg.en.fornuftig.groupID</groupId>
-    <artifactId>CardGame</artifactId>
+    <groupId>no.ntnu.idatg1003.oblig4</groupId>
+    <artifactId>DanielCardGame</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -15,8 +14,23 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
-    <!-- TODO: Sett dine dependencies for JavaFX og JUnit5-testing -->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.5.2</version>
+            </plugin>
+        </plugins>
+    </build>
 
-    <!-- TODO: Sett riktig versjon av nødvendige plugins -->
+    <dependencies>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>5.11.4</version>
+            <scope>test</scope>
+        </dependency>
 
+    </dependencies>
 </project>
