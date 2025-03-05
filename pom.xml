@@ -21,6 +21,11 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.5.2</version>
             </plugin>
+            <plugin>
+                <groupId>org.openjfx</groupId>
+                <artifactId>javafx-maven-plugin</artifactId>
+                <version>0.0.8</version>
+            </plugin>
         </plugins>
     </build>
 
@@ -34,10 +39,9 @@
 
         <dependency>
             <groupId>org.openjfx</groupId>
-            <artifactId>javafx</artifactId>
-            <version>25-ea+5</version>
+            <artifactId>javafx-controls</artifactId>
+            <version>23.0.1</version>
             <type>pom</type>
         </dependency>
     </dependencies>
-
 </project>
