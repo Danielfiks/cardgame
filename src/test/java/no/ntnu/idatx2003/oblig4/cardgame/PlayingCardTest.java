@@ -7,5 +7,4 @@ package no.ntnu.idatx2003.oblig4.cardgame;
  * @since 0.0.1 (04.03.25)
  */
 class PlayingCardTest {
-  
 }
