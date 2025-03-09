@@ -1,20 +1,19 @@
 package no.ntnu.idatx2003.oblig4.cardgame;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 import java.util.Random;
 
 /**
  * This class is responsible for holding al the 52 cards.
  * @author Daniel Wegner Fiksdalstrand
- * @version 0.0.3
+ * @version 0.0.4
  * @since 0.0.1 (05.03.25).
  */
 public class DeckOfCards {
   private final char[] suits = { 'S', 'H', 'D', 'C' };
   private List<PlayingCard> deck;
-  private Collection<PlayingCard> hand;
+  private final Hand playerHand;
   private Random rand;
 
   /**
@@ -22,7 +21,7 @@ public class DeckOfCards {
    */
   public DeckOfCards() {
     this.deck = new ArrayList<>();
-    this.hand = new ArrayList<>();
+    this.playerHand = new Hand();
     this.rand = new Random();
     fillDeckWithCards();
     assign();
