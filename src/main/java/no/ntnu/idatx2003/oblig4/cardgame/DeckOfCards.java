@@ -7,7 +7,7 @@ import java.util.Random;
 /**
  * This class is responsible for holding al the 52 cards.
  * @author Daniel Wegner Fiksdalstrand
- * @version 0.0.4
+ * @version 0.0.5
  * @since 0.0.1 (05.03.25).
  */
 public class DeckOfCards {
@@ -24,8 +24,8 @@ public class DeckOfCards {
     this.playerHand = new Hand();
     this.rand = new Random();
     fillDeckWithCards();
-    assign();
-    printArray();
+//    printHand();
+//    printDeck();
   }
 
   private void fillDeckWithCards() {
@@ -45,15 +45,16 @@ public class DeckOfCards {
     }
   }
 
-  private PlayingCard dealHand(int n) {
-    return this.deck.get(n);
-  }
+  //Used for debug: Printing the hand.
+//  private void printHand() {
+//    this.playerHand.getHand().forEach(x -> System.out.println(x.getAsString()));
+//  }
 
-  private void printArray() {
-    //Used for testing: Printing the arrayList.
-    for (PlayingCard playingCard : this.hand) {
-      System.out.println(playingCard.getAsString());
-    }
-  }
+  //Used for debug: Printing the hand.
+//  private void printDeck() {
+//    for (PlayingCard playingCard : this.deck) {
+//      playingCard.getAsString();
+//    }
+//  }
 
 }
