@@ -7,7 +7,7 @@ import java.util.Random;
 /**
  * This class is responsible for holding al the 52 cards.
  * @author Daniel Wegner Fiksdalstrand
- * @version 0.0.5
+ * @version 0.0.6
  * @since 0.0.1 (05.03.25).
  */
 public class DeckOfCards {
@@ -28,11 +28,12 @@ public class DeckOfCards {
 //    printDeck();
   }
 
-  private void fillDeckWithCards() {
-    int card;
-
+  /**
+   * The method fills the {@link DeckOfCards#deck deck} with {@code 52} unique cards.
+   */
+  public void fillDeckWithCards() {
     for (char suit : this.suits) {
-      for (card = 1; card < 14; card++) {
+      for (int card = 1; card < 14; card++) {
         this.deck.add(new PlayingCard(suit, card));
       }
     }
