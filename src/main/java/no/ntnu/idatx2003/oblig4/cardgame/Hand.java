@@ -34,7 +34,7 @@ public class Hand {
 
   /**
    * Return the contents of the hand.
-   * @return an iterator of the hand.
+   * @return a List.
    */
   public List<PlayingCard> getHand() {
     return new ArrayList<>(this.playerHand);
