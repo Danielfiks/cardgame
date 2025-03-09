@@ -2,12 +2,12 @@ package no.ntnu.idatx2003.oblig4.cardgame;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Iterator;
+import java.util.List;
 
 /**
  * This class is responsible for storing the players hand.
  * @author Daniel Wegner Fiksdalstrand
- * @version 0.0.2
+ * @version 0.0.3
  * @since 0.0.1 (05.03.25)
  */
 public class Hand {
@@ -29,9 +29,6 @@ public class Hand {
     if (providedCard == null) {
       throw new IllegalArgumentException("The card cannot me null");
     }
-    else if (this.playerHand.contains(providedCard)) {
-      throw new IllegalArgumentException("There cannot be a duplicate of a card");
-    }
     this.playerHand.add(providedCard);
   }
 
@@ -39,8 +36,8 @@ public class Hand {
    * Return the contents of the hand.
    * @return an iterator of the hand.
    */
-  public Iterator<PlayingCard> getHand() {
-    return this.playerHand.iterator();
+  public List<PlayingCard> getHand() {
+    return new ArrayList<>(this.playerHand);
   }
 
   /**
