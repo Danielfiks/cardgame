@@ -1,4 +1,4 @@
-package no.ntnu.idatx2003.oblig4.cardgame;
+package no.ntnu.idatx2003.oblig4.cardgame.model;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * This class is responsible for storing the players hand.
  * @author Daniel Wegner Fiksdalstrand
- * @version 0.0.3
+ * @version 0.0.4
  * @since 0.0.1 (05.03.25)
  */
 public class Hand {
@@ -23,7 +23,7 @@ public class Hand {
   /**
    * The class adds cards to the players hand.
    * @param providedCard the received card which is added to the hand.
-   * @throws IllegalArgumentException if {@link #addToHand(PlayingCard) providedCard} is null.
+   * @throws IllegalArgumentException if providedCard is null.
    */
   public void addToHand(PlayingCard providedCard) {
     if (providedCard == null) {
@@ -34,7 +34,7 @@ public class Hand {
 
   /**
    * Return the contents of the hand.
-   * @return a List.
+   * @return a List of playingCards.
    */
   public List<PlayingCard> getHand() {
     return new ArrayList<>(this.playerHand);
