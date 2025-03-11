@@ -1,5 +1,7 @@
 package no.ntnu.idatx2003.oblig4.cardgame;
 
+import no.ntnu.idatx2003.oblig4.cardgame.model.DeckOfCards;
+
 /**
  * Is the Main method for running the program.
  * @author Daniel Wegner Fiksdalstrand
