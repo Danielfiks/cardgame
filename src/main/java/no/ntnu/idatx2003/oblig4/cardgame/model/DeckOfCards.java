@@ -1,4 +1,4 @@
-package no.ntnu.idatx2003.oblig4.cardgame;
+package no.ntnu.idatx2003.oblig4.cardgame.model;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,7 +7,7 @@ import java.util.Random;
 /**
  * This class is responsible for holding al the 52 cards.
  * @author Daniel Wegner Fiksdalstrand
- * @version 0.0.7
+ * @version 0.0.8
  * @since 0.0.1 (05.03.25).
  */
 public class DeckOfCards {
@@ -26,8 +26,6 @@ public class DeckOfCards {
     this.rand = new Random();
     fillDeckWithCards();
     dealHand(this.numberOfCards);
-//    printHand();
-//    printDeck();
   }
 
   /**
@@ -47,6 +45,8 @@ public class DeckOfCards {
    * @param numberOfCards amount of cards to deal.
    */
   public void dealHand(int numberOfCards) {
+    this.playerHand.clearHand();
+    fillDeckWithCards();
     PlayingCard dealtCard;
     for (int i = 1 ; i <= numberOfCards ; i++) {
       int randomCard = rand.nextInt(this.deck.size());
@@ -56,16 +56,19 @@ public class DeckOfCards {
     }
   }
 
-  //Used for debug: Printing the hand.
-//  private void printHand() {
-//    this.playerHand.getHand().forEach(x -> System.out.println(x.getAsString()));
-//  }
+  /**
+   * Gets a list from {@link Hand#getHand()}
+   * @return List of PlayingCards.
+   */
+  public List<PlayingCard> getDealtHand() {
+    return this.playerHand.getHand();
+  }
 
-  //Used for debug: Printing the hand.
-//  private void printDeck() {
-//    for (PlayingCard playingCard : this.deck) {
-//      playingCard.getAsString();
-//    }
-//  }
-
+  /**
+   * Gets a list from {@link Hand#getHand()} and converts the playingCard objects to string
+   * @return a list with strings
+   */
+  public List<String> getDealtHandAsString() {
+    return getDealtHand().stream().map(PlayingCard::getAsString).toList();
+  }
 }
