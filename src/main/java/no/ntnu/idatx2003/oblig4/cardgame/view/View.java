@@ -44,8 +44,6 @@ public class View extends Application {
     BorderPane borderPane = new BorderPane();
     borderPane.setCenter(createCenterPane());
     borderPane.setRight(createRightPane());
-    borderPane.getChildren().addAll(createCenterPane(), createRightPane());
-
 
     // Create scene and set it on the stage.
     Scene scene = new Scene(borderPane, 640, 450);
@@ -66,7 +64,7 @@ public class View extends Application {
     });
 
     Button checkHandButton = new Button("Check hand");
-    dealHandButton.setOnAction(event -> {
+    checkHandButton.setOnAction(event -> {
       this.controller.checkHand();
     });
 

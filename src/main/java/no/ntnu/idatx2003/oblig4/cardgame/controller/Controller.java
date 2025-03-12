@@ -19,12 +19,14 @@ public class Controller {
 
   public void dealHand() {
     this.model.dealHand(5);
-  }
-
-  public void checkHand() {
     List<String> dealtHand = this.model.getDealtHandAsString();
     String stringOfCards = dealtHand.stream().collect(Collectors.joining(" "));
     this.view.updateHand(stringOfCards);
+
+  }
+
+  public void checkHand() {
+
     calculateSumOnHand();
   }
 
